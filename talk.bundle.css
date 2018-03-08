@@ -1,0 +1,273 @@
+/*
+  ~~~~~~~~~~~~~~~~~
+  ~~ BREAKPOINTS ~~
+  ~~~~~~~~~~~~~~~~~
+  > Use this as reference: https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+  > These breakpoints are also used by our typo system Typi
+  > We use https://include-media.com for handling breakpoints
+*/
+
+/*
+  ~~~~~~~~~~~~
+  ~~ COLORS ~~
+  ~~~~~~~~~~~~
+  > Please use the naming pattern from this website: http://chir.ag/projects/name-that-color/
+  > All colors should be sorted by name A --> Z
+*/
+
+/*
+  ~~~~~~~~~~~~
+  ~~ PADDINGS ~~
+  ~~~~~~~~~~~~
+*/
+
+/*
+  ~~~~~~~~~~~~
+  ~~ MARGINS ~~
+  ~~~~~~~~~~~~
+*/
+
+/*
+  ~~~~~~~~~~~~
+  ~~ SHADOWS ~~
+  ~~~~~~~~~~~~
+*/
+
+/*
+  ~~~~~~~~~~~~~~~~~~~~
+  ~~ COMPONENT BASE ~~
+  ~~~~~~~~~~~~~~~~~~~~
+*/
+
+/*
+  ~~~~~~~~~~~~
+  ~~ FONTS ~~
+  ~~~~~~~~~~~~
+*/
+
+/*
+  ~~~~~~~~~~~~~~~
+  ~~ Z-INDEXES ~~
+  ~~~~~~~~~~~~~~~
+*/
+
+/*
+*
+* 1. We meed the padding top to make sure the navigation does not overlay any content.
+*
+*/
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:before,
+*:after,
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.page-container {
+  padding-top: 90px;
+}
+
+@media (min-width: 1201px) {
+  .page-container {
+    padding-top: 111px;
+    /* 1. */
+  }
+}
+
+/*
+  ~~~~~~~~~~
+  ~~ TYPI ~~
+  ~~~~~~~~~~
+  > We are using TYPI as a typography and vertical rhythm helper: https://github.com/zellwk/typi
+  > It takes the breakpoints from $breakpoints
+  > for typography use it like: @include typi('xlarge');
+  > for vertical rhythm use it like: vr(1);
+*/
+
+@font-face {
+  font-family: 'headline';
+  src: url(../fonts/Canela-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'body';
+  src: url(../fonts/MaisonNeueTRIAL-Book.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'body-demi';
+  src: url(../fonts/MaisonNeueTRIAL-Demi.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'body-bold';
+  src: url(../fonts/MaisonNeueTRIAL-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'extended-book';
+  src: url(../fonts/MaisonNeueExtendedTRIAL-Book.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'extended-demi';
+  src: url(../fonts/MaisonNeueExtendedTRIAL-Demi.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'extended-bold';
+  src: url(../fonts/MaisonNeueExtendedTRIAL-Bold.woff) format("woff");
+}
+
+html {
+  font-family: "body", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+html html {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+@media all and (min-width: 600px) {
+  html html {
+    font-size: 112.5%;
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1875;
+  font-family: "headline", Times, serif;
+  margin: 0;
+}
+
+@media all and (min-width: 600px) {
+  h1 {
+    font-size: 3.75rem;
+    line-height: 1.2167;
+  }
+}
+
+h2 {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "body-demi", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+@media all and (min-width: 600px) {
+  h2 {
+    font-size: 112.5%;
+    line-height: 1.4;
+  }
+}
+
+h3 {
+  font-size: 1.6875rem;
+  line-height: 1.4;
+  font-family: "headline", Times, serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+strong,
+b {
+  font-family: "body-demi", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.background-chablis {
+  background-color: #fff2f3;
+}
+
+.body--hide-overflow {
+  overflow: hidden;
+}
+
+#coral_talk_stream {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "body", Helvetica, Arial, sans-serif;
+  margin-bottom: 3.25rem;
+}
+
+@media all and (min-width: 600px) {
+  #coral_talk_stream {
+    font-size: 112.5%;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1201px) {
+  #coral_talk_stream {
+    margin-bottom: 2.8rem;
+    grid-column: 1 / span 2;
+  }
+}
+
+#coral_talk_stream .talk-tab-button {
+  font-family: "body-demi", Helvetica, Arial, sans-serif;
+  border: 0 !important;
+  font-size: 24px;
+  color: #d4d4d4;
+}
+
+#coral_talk_stream .talk-tab-bar {
+  border: 0;
+}
+
+#coral_talk_stream .talk-tab-active .talk-tab-button {
+  color: #6c33ff;
+  border-bottom: 2px solid #6c33ff;
+}
+
+
+/*# sourceMappingURL=talk.bundle.css.map*/
